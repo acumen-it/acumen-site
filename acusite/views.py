@@ -28,7 +28,7 @@ def send_registration_confirm_mail(to):
     msg['Subject'] = "You've been registered successfully!"
     msg['To'] = to
     server = smtplib.SMTP('smtp.mailgun.org', 25)
-    server.login("acumenit@acumenit", settings.EMAIL_HOST_PASSWORD)
+    server.login("acumenit@acumenit.in", settings.EMAIL_HOST_PASSWORD)
     part1 = MIMEText(
         "You've been registered for Acumen IT successfully!", 
         'plain'
