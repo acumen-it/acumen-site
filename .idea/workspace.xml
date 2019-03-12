@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a71d8ae7-e7df-4130-8a9c-77f63130ff2c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/acusite/static/acusite/js/HomeJs/vanta.fog.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acumen_site/settings.py" afterPath="$PROJECT_DIR$/acumen_site/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acusite/static/acusite/css/dashboardCss/style.css" afterPath="$PROJECT_DIR$/acusite/static/acusite/css/dashboardCss/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acusite/templates/acumenapp/dashboard.html" afterPath="$PROJECT_DIR$/acusite/templates/acumenapp/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acusite/templates/acumenapp/events.html" afterPath="$PROJECT_DIR$/acusite/templates/acumenapp/events.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acusite/templates/acumenapp/home.html" afterPath="$PROJECT_DIR$/acusite/templates/acumenapp/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acusite/views.py" afterPath="$PROJECT_DIR$/acusite/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,7 +39,32 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-680">
               <caret line="80" column="24" lean-forward="false" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-              <folding />
+              <folding>
+                <marker date="1552404881539" expanded="true" signature="7177:8084" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="7215:8033" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="7279:8033" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="8127:8828" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="8165:8777" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="8202:8731" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="8853:8904" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="8927:8979" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="9008:9456" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="9040:9456" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="9485:9973" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="9517:9964" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="9696:9906" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="9998:10396" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="10031:10337" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="10428:11417" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="10433:10567" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1552404881539" expanded="true" signature="10888:11027" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="11455:12913" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="11460:11586" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1552404881539" expanded="true" signature="11892:12755" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="12043:12346" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="12186:12306" ph="..." />
+                <marker date="1552404881539" expanded="true" signature="12360:12686" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,7 +84,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="12" column="55" lean-forward="false" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-              <folding />
+              <folding>
+                <marker date="1552404881531" expanded="true" signature="15219:15271" ph="..." />
+                <marker date="1552404881531" expanded="true" signature="15280:15322" ph="..." />
+                <marker date="1552404881531" expanded="true" signature="15335:15414" ph="..." />
+                <marker date="1552404881531" expanded="true" signature="15461:15791" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,7 +97,7 @@
       <file leaf-file-name="events.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/acusite/templates/acumenapp/events.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
+            <state relative-caret-position="4852">
               <caret line="936" column="20" lean-forward="false" selection-start-line="936" selection-start-column="20" selection-end-line="936" selection-end-column="20" />
               <folding />
             </state>
@@ -79,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/acusite/templates/acumenapp/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="86" column="37" lean-forward="true" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
+              <caret line="86" column="37" lean-forward="false" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -108,7 +137,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/acumen_site/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="-867">
               <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
               <folding />
             </state>
@@ -386,6 +415,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'master' of https://github.com/acumen-it/acumen-site&#10;&#10;# Conflicts:&#10;#&#9;acusite/templates/acumenapp/events.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/acumen-it/acumen-site&#10;&#10;# Conflicts:&#10;#&#9;acusite/templates/acumenapp/events.html" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -410,7 +443,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2924">
           <caret line="172" column="4" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="172" selection-end-column="4" />
-          <folding />
+          <folding>
+            <marker date="1552404881531" expanded="true" signature="15219:15271" ph="..." />
+            <marker date="1552404881531" expanded="true" signature="15280:15322" ph="..." />
+            <marker date="1552404881531" expanded="true" signature="15335:15414" ph="..." />
+            <marker date="1552404881531" expanded="true" signature="15461:15791" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -481,7 +519,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4641">
           <caret line="273" column="32" lean-forward="false" selection-start-line="273" selection-start-column="32" selection-end-line="273" selection-end-column="32" />
-          <folding />
+          <folding>
+            <marker date="1552404881531" expanded="true" signature="15219:15271" ph="..." />
+            <marker date="1552404881531" expanded="true" signature="15280:15322" ph="..." />
+            <marker date="1552404881531" expanded="true" signature="15335:15414" ph="..." />
+            <marker date="1552404881531" expanded="true" signature="15461:15791" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -695,7 +738,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="55" lean-forward="false" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-          <folding />
+          <folding>
+            <marker date="1552404881531" expanded="true" signature="15219:15271" ph="..." />
+            <marker date="1552404881531" expanded="true" signature="15280:15322" ph="..." />
+            <marker date="1552404881531" expanded="true" signature="15335:15414" ph="..." />
+            <marker date="1552404881531" expanded="true" signature="15461:15791" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -731,7 +779,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-680">
           <caret line="80" column="24" lean-forward="false" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-          <folding />
+          <folding>
+            <marker date="1552404881539" expanded="true" signature="7177:8084" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="7215:8033" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="7279:8033" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="8127:8828" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="8165:8777" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="8202:8731" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="8853:8904" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="8927:8979" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="9008:9456" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="9040:9456" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="9485:9973" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="9517:9964" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="9696:9906" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="9998:10396" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="10031:10337" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="10428:11417" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="10433:10567" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1552404881539" expanded="true" signature="10888:11027" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="11455:12913" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="11460:11586" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1552404881539" expanded="true" signature="11892:12755" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="12043:12346" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="12186:12306" ph="..." />
+            <marker date="1552404881539" expanded="true" signature="12360:12686" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -739,14 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/acusite/templates/acumenapp/events.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="936" column="20" lean-forward="false" selection-start-line="936" selection-start-column="20" selection-end-line="936" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -762,14 +827,22 @@
     <entry file="file://$PROJECT_DIR$/acusite/templates/acumenapp/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="86" column="37" lean-forward="true" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
+          <caret line="86" column="37" lean-forward="false" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/acusite/templates/acumenapp/events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4852">
+          <caret line="936" column="20" lean-forward="false" selection-start-line="936" selection-start-column="20" selection-end-line="936" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/acumen_site/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="-867">
           <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
           <folding />
         </state>

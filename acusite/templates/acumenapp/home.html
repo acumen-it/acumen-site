@@ -275,6 +275,7 @@ Once IT arrives, Augmented Reality will be everywhere.</span><br>
 <script src="{% static 'acusite/js/HomeJs/three.r92.min.js' %}"></script>
 <script src="{% static 'acusite/js/HomeJs/vanta.waves.min.js' %}"></script>
 <script src="{% static 'acusite/js/HomeJs/vanta.rings.min.js' %}"></script>
+<script src="{% static 'acusite/js/HomeJs/vanta.fog.min.js' %}"></script>
 <script>
   //paste this code under head tag or in a seperate js file.
   // Wait for window load
@@ -286,9 +287,22 @@ Once IT arrives, Augmented Reality will be everywhere.</span><br>
 </script>
 
 <script>
+VANTA.FOG({
+  el: "#one",
+  highlightColor: 0x0,
+  midtoneColor: 0x0,
+  lowlightColor: 0x0,
+  baseColor: 0x400909,
+  blurFactor: 0.28,
+  speed: 0.70,
+  zoom: 0.80
+})
+</script>
+    
+<script>
 VANTA.WAVES({
   el: "#two",
-  color: 0x60707,
+  color: 0xd0f11,
   waveHeight: 34.50,
   waveSpeed: 1.10
 })
