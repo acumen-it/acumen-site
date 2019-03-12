@@ -913,12 +913,14 @@ $('#clicked12').click(function() {
 });
 function registerAll(){
 	var fun_events = $('input[id^=paper]');
+	alert_flag = true;
 	for(var i = 0; i < 12; i++){
-		sendurlfun(fun_events[i].value);
+		if(i == 11) alert_flag = false;
+		sendurlfun(fun_events[i].value, alert_flag);
 	}
 }
 
-function sendurlfun(paper){
+function sendurlfun(paper, all){
  var url = 'https://www.acumenit.in/eventreg/';
     var data = {'event': paper};
     var success = function () {
@@ -926,13 +928,13 @@ function sendurlfun(paper){
        window.location.reload();
 
     };
-    alert("Event successfully registered!" )
     $.ajax({
          type: "GET",
          url: url,
          data: data,
          success: success
     });
+	if (!all) alert("Event successfully registered!" )
 }
 </script>
 
