@@ -25,7 +25,7 @@ class Profile(models.Model):
                       (MECH, 'MECHANICAL'), (CHEMICAL, 'CHEMICAL'),
                       (EIE, 'ELECTRONICS AND INSTRUMENTATION ENGINEERING'), (TEXTILE, 'TEXTILE'))
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     roll_number = models.CharField(max_length=20, default="1602-70-700-777")
     year = models.CharField(max_length=2, choices=YEAR_CHOICES, default="I")
     branch = models.CharField(max_length=50, choices=BRANCH_CHOICES, default="IT")

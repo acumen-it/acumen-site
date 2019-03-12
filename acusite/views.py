@@ -129,6 +129,11 @@ def register(request):
         user = None
         try:
             user = User.objects.get(email=emailid)
+            try:
+                participant = User.objects.get(user=user)
+                return HttpResponse('User already exists please try logging in')
+            except:
+                pass
         except:
             user = User.objects.create_user(username=emailid, email=emailid, password=password,first_name=username)
         print(user)
@@ -142,7 +147,6 @@ def register(request):
         print(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
         send_email('registration', emailid)
         return redirect(reverse("dashboard"))
-    pass
 
 
 #login Page
