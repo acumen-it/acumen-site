@@ -88,7 +88,8 @@
       </nav>
     </div>
     <main class="grid-container">
-
+	<p>You can register for all events at just 200 INR as a special combo.</p>
+	<button onclick="registerAll()">Register for all</button>
 	<div class="grid-item">
 		<div class="wrapper">
 			<div class="card-container">
@@ -910,6 +911,13 @@ $('#clicked12').click(function() {
     sendurlfun(paper)
 
 });
+function registerAll(){
+	var fun_events = $('input[id^=paper]');
+	for(var i = 0; i < 12; i++){
+		sendurlfun(fun_events[i].value);
+	}
+}
+
 function sendurlfun(paper){
  var url = 'https://www.acumenit.in/eventreg/';
     var data = {'event': paper};
