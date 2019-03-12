@@ -50,7 +50,7 @@ email_templates = {
 }
 
 def send_email(template, to):
-    email_templates[template](to, attachment)
+    email_templates[template](to)
 
 # Create your views here.
 def home(request):
