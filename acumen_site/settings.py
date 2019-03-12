@@ -28,10 +28,10 @@ TEST_VERSION = False
 
 ALLOWED_HOSTS = ['*']
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'acumen.it.vce@gmail.com'
-EMAIL_HOST_PASSWORD = 'acumenIT@2K19'
-EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'acumenit@acumenit.in'
+EMAIL_HOST_PASSWORD = os.environ.get('MAILGUN_PASS')
+EMAIL_PORT = 465
 
 # Application definition
 
