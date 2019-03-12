@@ -927,16 +927,18 @@ function registerAll(){
 	} else{
 		alert("Please login or register")
 	}
+	window.location.reload();
+
 }
 
 function sendurlfun(paper, all){
 	var user_auth = '{{user.is_authenticated}}';
 	if(user_auth !== 'False'){
- var url = 'https://www.acumenit.in/eventreg/';
+ 	var url = 'https://www.acumenit.in/eventreg/';
     var data = {'event': paper};
     var success = function () {
         console.log('yay');
-       window.location.reload();
+       	window.location.reload();
 
     };
     $.ajax({

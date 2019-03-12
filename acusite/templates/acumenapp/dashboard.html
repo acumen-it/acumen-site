@@ -47,46 +47,61 @@
     </div>
   <p class="heading">Welcome<!-- Username --> {{user.first_name}}!</p>
 <div class="row">
-    <div class="col col-lg-4 col-md-12 col-sm-12">
-      <div id="one">
-        <p class="text"> Registered Events:<br></p>
-            <p class="text">
-            {% for evreg in evreglist %}
-            -->{{evreg.event_name}} <a href="{% url 'eventdel' %}?event={{evreg.event_id}}" class="btn btn-dark del" >Delete</a>
-       <!--     <a href="{% url 'eventdel' %}?event={{evreg.event_id}}" class="btn btn-dark del" >Delete</a>-->
-            <p class="text">COST:Rs.{{evreg.event_cost}}/-
-            <a href="{% url 'payment_request' %}?event={{evreg.event_id}}&price={{evreg.event_cost}}" class="btn btn-dark del" >pay</a>
-            <br>
-    {% endfor %}
-        </p>
-        <p class="text">TOTAL COST:Rs.{{pro.cost}}/-({{combo}})
-        <a href="{% url 'payment_request' %}?event=all&price={{pro.cost}}" class="btn btn-dark del" >pay all</a>
-        </p>
-    </div>
+    <div class="col col-lg-6 col-md-12 col-sm-12">
+      <table id="one" class="table table-striped">
+          <thead class="thead-light">
+                    <tr>
+                    <th class="text">Registered Events</th>
+                    <th class="text">Delete</th>
 
+                    <th class="text">Cost</th>
+                    <th class="text">Pay</th>
+
+                    </tr>
+                    </thead>
+          {% for evreg in evreglist %}
+                    <tr>
+                        <td class="text">{{evreg.event_name}}  </td>
+                        <td class="text"><a href="{% url 'eventdel' %}?event={{evreg.event_id}}" class="btn btn-dark del" >Delete</a></td>
+                        <td class="text"> COST:Rs.{{evreg.event_cost}}/-  </td>
+                        <td class="text"><a href="{% url 'payment_request' %}?event={{evreg.event_id}}&price={{evreg.event_cost}}" class="btn btn-dark del" >pay</a></td>
+                    </tr>
+
+       <!--     <a href="{% url 'eventdel' %}?event={{evreg.event_id}}" class="btn btn-dark del" >Delete</a>-->
+    {% endfor %}
+          <tr colspan="4"><td class="text">TOTAL COST:Rs.{{pro.cost}}/-({{combo}})
+        <a href="{% url 'payment_request' %}?event=all&price={{pro.cost}}" class="btn btn-dark del" >pay all</a></td></tr>
+      </table>
     </div>
-   <center> <div class="col col-lg-4 col-md-12 col-sm-12">
+ <div class="col col-lg-2 col-md-12 col-sm-12">
              {% get_static_prefix as STATIC_PREFIX %}
        <p class="text">Qr:</p> <img src="{% static 'acusite/users/'%}{{pro.qr_code}}.png" height="150" width="150"/><br><br>
           <a href="{% url 'logout' %}" >   <button style="margin-left: 15%; margin-top: 5%" type="button" id="signout11" class="btn btn-outline-secondary btn-lg " onclick=signout()>SignOut</button></a>
 
     </div>
-   </center>
+
+
+
     <div class="col col-lg-4 col-md-12 col-sm-12">
-       <p style="padding-right: 15%; padding-left: 15%" class="text"> Events Paid:</p>
-        <div id="one">
-            <p class="text">
+       <table id="2" class="table table-striped">
+          <thead class="thead-light">
+                    <tr>
+                    <th class="text">Paid Events</th>
+                    </tr>
+                    </thead>
                 {% for paid in paidlist %}
-            {{paid.event_name}}
+           <th>{{paid.event_name}}</th>
             <br>
     {% endfor %}
 
             </p>
+       </table>
         </div>
     </div>
+
 </div>
 <div class="row">
-    <div class="col col-lg-6 col-md-6 col-sm-12 ">
+    <div class="col col-lg-4 col-md-6 col-sm-12 ">
             {% if request.user.is_authenticated %}
                 <h4 class="text">Your details</h4>
                 <form role="form" action="{% url 'change' %}" method="POST" id="participantDetails">
