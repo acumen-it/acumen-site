@@ -27,6 +27,8 @@ DEBUG = True
 TEST_VERSION = False
 
 ALLOWED_HOSTS = ['*']
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_HOST_USER = 'acumenit@acumenit.in'
