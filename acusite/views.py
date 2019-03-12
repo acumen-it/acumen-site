@@ -191,11 +191,14 @@ def event_reg(request):
             user1 = User.objects.get(username=user)
             print(user1)
             pro = Profile.objects.get(user=user1)
-            pro.cost=pro.cost+ee.event_cost
-            pro.save()
             print(pro.pk)
             ed=EventDetails(event_id=ee,team_id='none',qr_code=pro,status_choice='WAITING')
             ed.save()
+            no_of_events_for_pro = EventDetails.objects.filter(qr_code=pro).__len__()
+            pro.cost = 200 if no_of_events_for_pro > 9 else (
+                ((no_of_events_for_pro//3)*100) + ((no_of_events_for_pro%3)*40)
+            )
+            pro.save()
             print(request.user.username)
             return HttpResponse("success")
     else:
@@ -216,7 +219,10 @@ def event_del(request):
                 if not edel.amount_paid:
                     edel.delete()
                     break
-            pro.cost = pro.cost - ee.event_cost
+            no_of_events_for_pro = EventDetails.objects.filter(qr_code=pro).__len__()
+            pro.cost = 200 if no_of_events_for_pro > 9 else (
+                ((no_of_events_for_pro//3)*100) + ((no_of_events_for_pro%3)*40)
+            )
             pro.save()
 
             return redirect(reverse('dashboard'))
@@ -303,6 +309,8 @@ def payment_request(request):
                     auth_token=AUTH_TOKEN)
     eventid =request.GET['event']
     price = request.GET['price']
+    if price == 0:
+        return redirect(reverse("dashboard"))
     variable=''
     if eventid =='all':
         variable='payment for acumen it registered events'

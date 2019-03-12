@@ -34,6 +34,7 @@ class Profile(models.Model):
     qr_code = models.CharField(max_length=30,default=0)
     total_points = models.IntegerField(default=0)
     cost=models.IntegerField(default=0)
+    
 class Event(models.Model):
     event_id = models.CharField(max_length=5, default="NULL", primary_key=True)
     event_name = models.CharField(max_length=50)
