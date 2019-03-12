@@ -2,19 +2,55 @@ from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.utils.crypto import get_random_string
-from django.core.mail import EmailMessage
 import pyqrcode as pyq
 from django.urls import reverse
-from .models import Profile,Event,EventDetails,Organizer,Team,Otpgenerator,Payments
+from .models import *
 from django.contrib.auth.decorators import login_required
 from .models import Profile
 import random
 from django.views.decorators.csrf import csrf_exempt
 from instamojo_wrapper import Instamojo
 from django.conf import settings
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
 
 API_KEY = 'f1761e15f5415be96a7248dea2bbdaf0'
 AUTH_TOKEN = 'f509e1c1b11e28cad3260de8620b1456'
+
+email_templates = {
+    'registration': send_registration_confirm_mail,
+    'certificate': send_certificate_mail
+}
+
+def send_certificate_mail():
+    pass
+
+def send_registration_confirm_mail(to):
+    msg = MIMEMultipart()
+    msg['From'] = "Acumen IT <acumenit@acumenit.in>"
+    msg['Subject'] = "You've been registered successfully!"
+    msg['To'] = to
+    server = smtplib.SMTP('smtp.mailgun.org', 25)
+    server.login("acumenit@acumenit", settings.EMAIL_HOST_PASSWORD)
+    part1 = MIMEText(
+        "You've been registered for Acumen IT successfully!", 
+        'plain'
+    )
+    fp = open('/home/acumenit/acumen-site/staticfiles/acusite/users/' + to[:-10] + '.png', 'rb')                                                   
+    img = MIMEImage(fp.read())
+    fp.close()
+    msg.attach(img)
+    server.sendmail(
+        settings.EMAIL_HOST_USER,
+        to,
+        msg.as_string()
+    )
+    server.quit()
+
+def send_email(template, to):
+    email_templates[template](to, attachment)
 
 # Create your views here.
 def home(request):
@@ -104,13 +140,7 @@ def register(request):
         profile.save()
         login(request, user)
         print(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
-        mail_subject = 'Your AcumenIT account has been created.'
-        message = 'Show this at the venue. Your Qr is:'
-        email = EmailMessage(
-            mail_subject, message, to=[emailid]
-        )
-        email.attach_file('/home/acumenit/acumen-site/staticfiles/acusite/users/' + emailid[:-10] + ".png")
-        email.send()
+        send_email('registration', emailid)
         return redirect(reverse("dashboard"))
     pass
 
