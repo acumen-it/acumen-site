@@ -916,15 +916,22 @@ $('#clicked12').click(function() {
 
 });
 function registerAll(){
+	var user_auth = '{{user.is_authenticated}}';
+	if(user_auth !== 'False'){
 	var fun_events = $('input[id^=paper]');
 	alert_flag = true;
 	for(var i = 0; i < 12; i++){
 		if(i == 11) alert_flag = false;
 		sendurlfun(fun_events[i].value, alert_flag);
 	}
+	} else{
+		alert("Please login or register")
+	}
 }
 
 function sendurlfun(paper, all){
+	var user_auth = '{{user.is_authenticated}}';
+	if(user_auth !== 'False'){
  var url = 'https://www.acumenit.in/eventreg/';
     var data = {'event': paper};
     var success = function () {
@@ -939,6 +946,9 @@ function sendurlfun(paper, all){
          success: success
     });
 	if (!all) alert("Event successfully registered!" )
+	} else{
+		alert("Please login or register")
+	}
 }
 </script>
 
