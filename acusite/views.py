@@ -104,13 +104,13 @@ def register(request):
         profile.save()
         login(request, user)
         print(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
-        # mail_subject = 'Your AcumenIT account has been created.'
-        # message = 'Show this at the venue. Your Qr is:'
-        # email = EmailMessage(
-        #     mail_subject, message, to=[emailid]
-        # )
-        # email.attach_file('/home/acumenit/acumen-site/staticfiles/acusite/users/' + emailid[:-10] + ".png")
-        # email.send()
+        mail_subject = 'Your AcumenIT account has been created.'
+        message = 'Show this at the venue. Your Qr is:'
+        email = EmailMessage(
+            mail_subject, message, to=[emailid]
+        )
+        email.attach_file('/home/acumenit/acumen-site/staticfiles/acusite/users/' + emailid[:-10] + ".png")
+        email.send()
         return redirect(reverse("dashboard"))
     pass
 
