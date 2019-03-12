@@ -11,6 +11,7 @@ from .models import Profile
 import random
 from django.views.decorators.csrf import csrf_exempt
 from instamojo_wrapper import Instamojo
+from django.conf import settings
 
 API_KEY = 'f1761e15f5415be96a7248dea2bbdaf0'
 AUTH_TOKEN = 'f509e1c1b11e28cad3260de8620b1456'
@@ -102,6 +103,7 @@ def register(request):
         profile = Profile(user=user, phone_number=mobile_number, qr_code= emailid[:-10])
         profile.save()
         login(request, user)
+        print(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
         # mail_subject = 'Your AcumenIT account has been created.'
         # message = 'Show this at the venue. Your Qr is:'
         # email = EmailMessage(
