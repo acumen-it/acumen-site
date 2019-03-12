@@ -58,9 +58,9 @@ class EventDetails(models.Model):
     NONE = 'NONE'
 
     status_choice = models.CharField(max_length=8, choices=STATUS_CHOICES,default="WAITING")
-    event_id = models.ForeignKey('Event', on_delete='CASCADE', max_length=5)
+    event_id = models.ForeignKey('Event', on_delete=models.CASCADE, max_length=5)
     team_id = models.CharField(max_length=20)
-    qr_code = models.ForeignKey('Profile', on_delete='CASCADE', max_length=50)
+    qr_code = models.ForeignKey('Profile', on_delete=models.CASCADE, max_length=50)
     amount_paid = models.BooleanField(default=False)
     payment_mode = models.CharField(max_length=10, choices=STATUS_CHOICES,default='OFF')
 
@@ -71,7 +71,7 @@ class Team(models.Model):
 
     team_id = models.CharField(max_length=20, unique=True)
     team_size = models.IntegerField(default=1)
-    event_id = models.ForeignKey('Event', on_delete='CASCADE', max_length=5)
+    event_id = models.ForeignKey('Event', on_delete=models.CASCADE, max_length=5)
 
     def __str__(self):
         return self.event_id
