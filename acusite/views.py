@@ -220,7 +220,7 @@ def event_del(request):
                     edel.delete()
                     break
             no_of_events_for_pro = EventDetails.objects.filter(qr_code=pro).__len__()
-            pro.cost = 200 if no_of_events_for_pro > 9 else (
+            pro.cost = 200 if no_of_events_for_pro == 12 else (
                 ((no_of_events_for_pro//3)*100) + ((no_of_events_for_pro%3)*40)
             )
             pro.save()
