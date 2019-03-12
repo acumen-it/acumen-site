@@ -19,11 +19,6 @@ from email.mime.image import MIMEImage
 API_KEY = 'f1761e15f5415be96a7248dea2bbdaf0'
 AUTH_TOKEN = 'f509e1c1b11e28cad3260de8620b1456'
 
-email_templates = {
-    'registration': send_registration_confirm_mail,
-    'certificate': send_certificate_mail
-}
-
 def send_certificate_mail():
     pass
 
@@ -48,6 +43,11 @@ def send_registration_confirm_mail(to):
         msg.as_string()
     )
     server.quit()
+
+email_templates = {
+    'registration': send_registration_confirm_mail,
+    'certificate': send_certificate_mail
+}
 
 def send_email(template, to):
     email_templates[template](to, attachment)
