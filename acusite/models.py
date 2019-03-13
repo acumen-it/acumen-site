@@ -64,7 +64,7 @@ class EventDetails(models.Model):
     qr_code = models.ForeignKey('Profile', on_delete=models.CASCADE, max_length=50)
     amount_paid = models.BooleanField(default=False)
     payment_mode = models.CharField(max_length=10, choices=STATUS_CHOICES,default='OFF')
-
+    score = models.IntegerField(default=0)
 
 
 
