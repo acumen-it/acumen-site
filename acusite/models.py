@@ -60,7 +60,7 @@ class EventDetails(models.Model):
 
     status_choice = models.CharField(max_length=8, choices=STATUS_CHOICES,default="WAITING")
     event_id = models.ForeignKey('Event', on_delete=models.CASCADE, max_length=5)
-    team_id = models.CharField(max_length=20)
+    team_id = models.CharField(max_length=100)
     qr_code = models.ForeignKey('Profile', on_delete=models.CASCADE, max_length=50)
     amount_paid = models.BooleanField(default=False)
     payment_mode = models.CharField(max_length=10, choices=STATUS_CHOICES,default='OFF')
