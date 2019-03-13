@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'acusite',
     'acuthon',
+    'restapi',
 ]
 
 MIDDLEWARE = [
