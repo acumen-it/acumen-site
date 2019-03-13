@@ -19,5 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('acuthon/', include('acuthon.urls', namespace='acuthon')),
-    path('', include('acusite.urls'))
+    path('', include('acusite.urls')),
+    path('andy/',include('restapi.urls'),name='android'),
 ]
