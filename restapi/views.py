@@ -181,6 +181,9 @@ def newGame(request):
     if request.method=='POST':
         event_id=request.POST.get('event_id')
         qr_code=request.POST.get('qr_code')
+        
+        if '.com' in qr_code:
+            qr_code = qr_code[:-10]
         print(event_id)
         if validateGame(event_id,qr_code):
 
@@ -242,6 +245,9 @@ def appendPlayers(request):
         qr_code=request.POST.get('qr_code')
         team_id=request.POST.get('team_id')
         event_id=request.POST.get('event_id')
+        
+        if '.com' in qr_code:
+            qr_code = qr_code[:-10]
 
         try:
             pro=Profile.objects.get(qr_code=qr_code)
