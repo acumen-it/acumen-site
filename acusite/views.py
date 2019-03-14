@@ -97,7 +97,7 @@ def dashboard(request):
         evregdet = []
         evreglist = []
         paidlist=[]
-        if(len(evregdet)+1) == 12:
+        if(len(evregdet)+1) > 5:
             pro.cost=200
         elif (len(evregdet)+1)%3 == 0:
             pro.cost = (len(evregdet)%3)*100
@@ -195,7 +195,7 @@ def event_reg(request):
             ed=EventDetails(event_id=ee,team_id='none',qr_code=pro,status_choice='WAITING')
             ed.save()
             no_of_events_for_pro = EventDetails.objects.filter(qr_code=pro).__len__()
-            pro.cost = 200 if no_of_events_for_pro == 12 else (
+            pro.cost = 200 if no_of_events_for_pro > 5 else (
                 ((no_of_events_for_pro//3)*100) + ((no_of_events_for_pro%3)*40)
             )
             pro.save()
@@ -220,7 +220,7 @@ def event_del(request):
                     edel.delete()
                     break
             no_of_events_for_pro = EventDetails.objects.filter(qr_code=pro).__len__()
-            pro.cost = 200 if no_of_events_for_pro == 12 else (
+            pro.cost = 200 if no_of_events_for_pro > 5 else (
                 ((no_of_events_for_pro//3)*100) + ((no_of_events_for_pro%3)*40)
             )
             pro.save()
